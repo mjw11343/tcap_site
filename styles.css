@@ -8,8 +8,8 @@
 
 /* Global Styles */
 body {
-    background-color: #2A2A2A;
-    color: #FFFFFF;
+    background-color: #FFF3DE; /* Creme Color */
+    color: #2A2A2A;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -19,6 +19,9 @@ header {
     display: flex;
     align-items: center;
     padding: 20px;
+    background-color: #F9E4BC;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #D4B883;
 }
 
 .header-container {
@@ -30,12 +33,13 @@ header {
     width: 200px;
     height: auto;
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .project-title {
     font-family: 'AnotherTypewriter', Arial, sans-serif;
     font-size: 2.5em;
-    color: #F9E4BC;
+    color: #B08F50;
 }
 
 nav ul {
@@ -46,12 +50,16 @@ nav ul {
     background-color: #4B3F79;
     margin: 0;
     padding: 10px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -60,6 +68,11 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -67,5 +80,35 @@ section {
 }
 
 h2 {
-    color: #B084CB;
+    color: #6B6192;
+}
+
+/* Buttons and links for more sleek design */
+button, a.button-link {
+    background-color: #4B3F79;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a.button-link:hover {
+    background-color: #6B6192;
+}
+
+/* Shiny hover effect for interactive elements */
+button::after, a.button-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFF3DE;
+    transition: width 0.4s;
+}
+
+button:hover::after, a.button-link:hover::after {
+    width: 100%;
 }
