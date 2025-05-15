@@ -1,0 +1,71 @@
+/* Stylesheet for Tribal Court of Appeals Project Website */
+
+/* Import the custom font */
+@font-face {
+    font-family: 'AnotherTypewriter';
+    src: url('/mnt/data/another_typewriter/atwriter.ttf') format('truetype');
+}
+
+/* Global Styles */
+body {
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.project-title {
+    font-family: 'AnotherTypewriter', Arial, sans-serif;
+    font-size: 2.5em;
+    color: #F9E4BC;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    background-color: #4B3F79;
+    margin: 0;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #E1DFE9;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #B084CB;
+}
