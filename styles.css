@@ -4,9 +4,12 @@
 body {
     background-color: #FFF3DE; /* Creme Color */
     color: #2A2A2A;
-    font-family: "Georgia", serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -31,42 +34,51 @@ header {
 }
 
 .project-title {
-    font-family: "Georgia", serif;
+    font-family: 'Georgia', serif;
     font-size: 2.5em;
     color: #B08F50;
 }
 
+/* Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
     background-color: #4B3F79;
-    margin: 0;
+    margin: 20px auto;
     padding: 10px;
     border-radius: 8px;
     max-width: 800px;
-    margin: 20px auto;
+    justify-content: center;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 1.2em;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3d3761;
 }
 
 nav ul li a:hover {
-    color: #E1DFE9;
+    background-color: #3d3761;
+    color: #FFFFFF;
 }
 
+/* Main Content Section */
 main {
     padding: 20px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
+    margin-bottom: 70px; /* Space for footer visibility */
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
 }
 
 section {
@@ -77,32 +89,16 @@ h2 {
     color: #6B6192;
 }
 
-/* Buttons and links for more sleek design */
-button, a.button-link {
+/* Sticky Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
     background-color: #4B3F79;
     color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, a.button-link:hover {
-    background-color: #6B6192;
-}
-
-/* Shiny hover effect for interactive elements */
-button::after, a.button-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FFF3DE;
-    transition: width 0.4s;
-}
-
-button:hover::after, a.button-link:hover::after {
+    border-top: 1px solid #6B6192;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
+    z-index: 10;
 }
