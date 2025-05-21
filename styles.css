@@ -14,9 +14,9 @@ body {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
     align-items: center;
-    justify-content: center;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -36,11 +36,10 @@ header {
 .main-image {
     width: 150px;
     height: auto;
-    margin-right: 1.5rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
     border-radius: 12px;
+    justify-self: start;
 }
 
 .main-image:hover {
@@ -52,8 +51,11 @@ header {
     font-weight: 300;
     color: #A3773B;
     margin: 0;
+    text-align: center;
     text-shadow: 1px 1px #fff;
     transition: color 0.3s ease;
+    grid-column: 2;
+    justify-self: center;
 }
 
 nav ul {
