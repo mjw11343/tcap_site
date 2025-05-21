@@ -17,6 +17,7 @@ header {
     display: grid;
     grid-template-columns: 150px 1fr 150px;
     align-items: center;
+    gap: 1rem;
     padding: 2rem;
     background: rgba(249, 228, 188, 0.85);
     backdrop-filter: blur(12px);
@@ -39,8 +40,7 @@ header {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     transition: transform 0.3s ease;
     border-radius: 12px;
-    justify-self: start;
-    border-radius: 12px;
+    justify-self: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -50,7 +50,7 @@ header {
 
 .project-title {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: bold;
     color: #A3773B;
     margin: 0;
     text-align: center;
@@ -58,7 +58,6 @@ header {
     transition: color 0.3s ease;
     grid-column: 2;
     justify-self: center;
-    font-weight: bold;
 }
 
 nav ul {
@@ -109,6 +108,7 @@ main {
 }
 
 section {
+    scroll-margin-top: 200px;
     margin-bottom: 3rem;
     padding: 2rem;
     border-radius: 1rem;
@@ -134,9 +134,9 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(75, 63, 121, 0.95);
     backdrop-filter: blur(6px);
-    color: #444;
+    color: #fff;
     border-top: 1px solid #ddd;
     position: fixed;
     bottom: 0;
