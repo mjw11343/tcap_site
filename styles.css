@@ -34,6 +34,17 @@ header {
     to { transform: translateY(0); opacity: 1; }
 }
 
+.content-image {
+    width: 750px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
 .main-image {
     width: 150px;
     height: auto;
@@ -62,36 +73,38 @@ header {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
+    margin: 1.5rem auto;
+    padding: 0.75rem 1.5rem; /* reduced from 1rem 2rem */
     background: rgba(75, 63, 121, 0.95);
-    border-radius: 999px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem; /* reduced from 2rem */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    max-width: 900px;
-    animation: fadeIn 1s ease;
+    max-width: 75%;
+    box-sizing: border-box;
 }
 
 nav ul li a {
+    display: block;
     text-decoration: none;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* was 1.1rem */
     font-weight: 500;
-    padding: 0.75rem 1.75rem;
-    border-radius: 999px;
+    padding: 0.5rem 1.25rem; /* was 0.75rem 1.75rem */
+    border-radius: 1.5rem; /* was 999px, looks cleaner here */
     background: transparent;
     border: 2px solid #fff;
     transition: all 0.25s ease-in-out;
-    position: relative;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
     background: #fff;
     color: #4B3F79;
-    transform: scale(1.05);
+    transform: scale(1.04); /* slightly smaller zoom effect */
 }
 
 main {
@@ -149,4 +162,46 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    nav ul li a {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 0.25rem 0;
+    }
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 1001;
+    background-color: #4B3F79;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+    background-color: #372d5a;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
 }
