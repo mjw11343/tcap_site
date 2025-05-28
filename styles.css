@@ -185,7 +185,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     }
-    
+
     .main-image {
     width: 60px; /* smaller but still horizontal */
     }
@@ -207,6 +207,10 @@ footer {
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
+    }
+
+    footer {
+        font-size: .5rem;
     }
 }
 
