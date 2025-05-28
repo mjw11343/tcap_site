@@ -42,6 +42,7 @@ header {
 .content-image {
     max-width: 100%;
     height: auto;
+    display: block;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     transition: transform 0.3s ease;
     border-radius: 12px;
@@ -184,25 +185,28 @@ footer {
     width: 100%;
     box-sizing: border-box;
     }
+    
     .main-image {
-    width: 80px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+    width: 60px; /* smaller but still horizontal */
     }
 
     .project-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+    text-align: left;
     line-height: 1.2;
-    text-align: center;
-    padding: 0 1rem;
-    word-wrap: break-word;
     }
 
     header {
-    grid-template-columns: 1fr; /* stack logo and title vertically */
-    justify-items: center;
+    grid-template-columns: 80px 1fr 80px; /* shrink columns, don’t stack */
     padding: 1rem;
+    gap: 0.5rem;
+    }
+
+    main, section {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
     }
 }
 
