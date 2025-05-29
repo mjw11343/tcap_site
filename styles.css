@@ -113,6 +113,26 @@ nav ul li a:hover {
     transform: scale(1.04); /* slightly smaller zoom effect */
 }
 
+.button-link {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4B3F79;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-link:hover {
+  background-color: #372d5a;
+  transform: scale(1.05);
+}
+
 main {
     max-width: 960px;
     width: 90%;
